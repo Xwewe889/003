@@ -1,0 +1,77 @@
+/* 時間軸框架設置 */
+#timeline-wrapper {
+    background-color: rgba(130, 117, 98, 0.5);  /* 半透明背景 */
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* 時間軸內容設置 */
+#timeline {
+    padding: 10px;
+    overflow-x: auto; /* 啟用橫向滾動 */
+    white-space: nowrap;
+    scroll-snap-type: x mandatory; /* 滾動到最近的卡片 */
+    display: flex;
+    gap: 20px;
+}
+
+/* 單個事件卡片 */
+.event {
+    background-color: rgba(255, 255, 255, 0.9); /* 卡片背景半透明 */
+    border-radius: 10px;
+    padding: 15px;
+    min-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 卡片陰影 */
+    text-align: center;
+    flex-shrink: 0; /* 防止卡片縮小 */
+    scroll-snap-align: center; /* 滾動時自動居中 */
+}
+
+/* 年份樣式 */
+.year {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3b3b3b;
+}
+
+/* 描述文字樣式 */
+.event p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* 事件圖片樣式 */
+.event img.event-image {
+    margin-top: 10px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 圖片陰影 */
+    height: auto;
+}
+
+/* 標題文字置中 */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #f3ebeb;
+    margin-bottom: 20px;
+}
+
+/* 滾動條樣式 */
+#timeline::-webkit-scrollbar {
+    height: 5px; /* 滾動條高度 */
+}
+
+#timeline::-webkit-scrollbar-thumb {
+    background-color: rgba(136, 136, 136, 0.8);
+    border-radius: 5px;
+}
+
+#timeline::-webkit-scrollbar-track {
+    background-color: rgba(241, 241, 241, 0.5);
+}
